@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Masterarbeitsthemen</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .slide {
+      background: #ffffff;
+      width: 960px;
+      min-height: 540px;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: white;
+      padding: 32px 48px 24px;
+    }
+
+    .slide-header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .slide-header p {
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 6px;
+      opacity: 0.75;
+      letter-spacing: 0.3px;
+    }
+
+    .cooperation-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 14px;
+      letter-spacing: 0.4px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #e8c547;
+      flex-shrink: 0;
+    }
+
+    .slide-body {
+      padding: 36px 48px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      flex: 1;
+    }
+
+    .thesis-card {
+      border-radius: 10px;
+      border: 1px solid #e4e8ee;
+      padding: 24px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+
+    .thesis-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+
+    .thesis-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: #e4e4e4;
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 40px;
+    }
+
+    .thesis-content {
+      flex: 1;
+    }
+
+    .thesis-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-bottom: 10px;
+    }
+
+    .tag-marketing {
+      background: #fff3cd;
+      color: #a07800;
+    }
+
+    .tag-tbd {
+      background: #f0f0f0;
+      color: #888;
+    }
+
+    .thesis-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a1a2e;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .thesis-subtitle {
+      font-size: 13px;
+      color: #5a6a80;
+      line-height: 1.6;
+    }
+
+    .thesis-card.placeholder {
+      border-style: dashed;
+      background: #fafbfc;
+    }
+
+    .thesis-card.placeholder .thesis-title {
+      color: #aaa;
+    }
+
+    .thesis-card.placeholder .thesis-subtitle {
+      color: #bbb;
+    }
+
+    .slide-footer {
+      background: #f7f8fa;
+      border-top: 1px solid #eaecf0;
+      padding: 12px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .slide-footer span {
+      font-size: 11px;
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    .neoh-logo-text {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #e8c547;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="slide-header">
+      <h1>Masterarbeitsthemen</h1>
+      <p>Betreute Abschlussarbeiten · Ausschreibung 2026</p>
+      <div class="cooperation-badge">
+        <span class="dot"></span>
+        Themen 1 &amp; 2 in Kooperation mit
+        <span class="neoh-logo-text">NEOH</span>
+      </div>
+    </div>
+
+    <div class="slide-body">
+
+      <!-- Thema 1 -->
+      <div class="thesis-card">
+        <div class="thesis-number">01</div>
+        <div class="thesis-content">
+          <span class="thesis-tag tag-marketing">Marketing Analytics</span>
+          <div class="thesis-title">
+            Marketing Mix Modeling für NEOH:<br/>
+            Messung der Werbewirkung einer TV-Kampagne auf dem deutschen Markt
+          </div>
+          <div class="thesis-subtitle">
+            Entwicklung und Anwendung eines Marketing Mix Models zur quantitativen Messung der
+            Wirkung einer NEOH Fernsehwerbekampagne in Deutschland — inkl. Medienmix-Analyse,
+            ROI-Messung und Handlungsempfehlungen für die Mediaplanung.
+          </div>
+        </div>
+      </div>
+
+      <!-- Thema 2 -->
+      <div class="thesis-card placeholder">
+        <div class="thesis-number">02</div>
+        <div class="thesis-content">
+          <span class="thesis-tag tag-tbd">Folgt</span>
+          <div class="thesis-title">Titel folgt</div>
+          <div class="thesis-subtitle">Thema in Kooperation mit NEOH · Details in Kürze verfügbar.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="slide-footer">
+      <span>Kooperationspartner: NEOH GmbH</span>
+      <span>Stand: Mai 2026</span>
+    </div>
+  </div>
+</body>
+</html>
