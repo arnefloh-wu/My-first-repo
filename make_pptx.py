@@ -83,9 +83,9 @@ def build_slide(prs, topics, slide_num, total_slides, show_hints=False):
     # Header
     add_rect(slide, 0, 0, W, hdr_h, fill_rgb=rgb(26, 26, 46))
     add_text(slide, pad, Inches(0.16), W - pad*2, Inches(0.52),
-             "Masterarbeitsthemen", 30, bold=True, color=rgb(255,255,255))
+             "Masterarbeitsthemen", 36, bold=True, color=rgb(255,255,255))
     add_text(slide, pad, Inches(0.66), W - pad*2, Inches(0.3),
-             "Betreute Abschlussarbeiten · Ausschreibung 2026", 12,
+             "Betreute Abschlussarbeiten · Ausschreibung 2026", 15,
              color=rgb(180,180,200))
 
     # NEOH badge (only on slide 1)
@@ -94,7 +94,7 @@ def build_slide(prs, topics, slide_num, total_slides, show_hints=False):
         add_rect(slide, pad, badge_t, Inches(4.4), Inches(0.36),
                  fill_rgb=rgb(50,50,80), border_rgb=rgb(100,100,140), border_pt=0.5)
         add_text(slide, pad + Inches(0.15), badge_t + Inches(0.06), Inches(4.2), Inches(0.28),
-                 "✦  Themen 1 & 2 in Kooperation mit  NEOH", 10,
+                 "✦  Themen 1 & 2 in Kooperation mit  NEOH", 12,
                  color=rgb(232,197,71))
 
     # Page indicator
@@ -120,7 +120,7 @@ def build_slide(prs, topics, slide_num, total_slides, show_hints=False):
 
         # Number
         add_text(slide, pad + Inches(0.1), t + Inches(0.1), Inches(0.5), card_h,
-                 num, 26, bold=True, color=rgb(215,215,215))
+                 num, 32, bold=True, color=rgb(215,215,215))
 
         # Tag
         tag_t = t + Inches(0.1)
@@ -128,15 +128,15 @@ def build_slide(prs, topics, slide_num, total_slides, show_hints=False):
         tag_pill_h = Inches(0.26)
         add_rect(slide, pad + Inches(0.62), tag_t, tag_w, tag_pill_h, fill_rgb=tag_bg)
         add_text(slide, pad + Inches(0.72), tag_t + Inches(0.04), tag_w, tag_pill_h,
-                 tag_text.upper(), 8, bold=True, color=tag_fg)
+                 tag_text.upper(), 10, bold=True, color=tag_fg)
 
         # Title
         add_text(slide, pad + Inches(0.62), t + Inches(0.38), card_w - Inches(0.78),
-                 Inches(0.36), title, 13, bold=True, color=rgb(26,26,46))
+                 Inches(0.36), title, 16, bold=True, color=rgb(26,26,46))
 
         # Description
         add_text(slide, pad + Inches(0.62), t + Inches(0.72), card_w - Inches(0.78),
-                 card_h - Inches(0.78), desc, 10, color=rgb(90,106,128))
+                 card_h - Inches(0.78), desc, 12, color=rgb(90,106,128))
 
     # Hints (last slide only)
     if show_hints:
@@ -144,10 +144,10 @@ def build_slide(prs, topics, slide_num, total_slides, show_hints=False):
         add_rect(slide, pad, hint_top, card_w, Inches(0.54),
                  fill_rgb=rgb(247,248,250), border_rgb=rgb(228,232,238), border_pt=0.75)
         add_text(slide, pad + Inches(0.2), hint_top + Inches(0.05), card_w, Inches(0.18),
-                 "ALLGEMEINE HINWEISE", 8, bold=True, color=rgb(138,150,168))
+                 "ALLGEMEINE HINWEISE", 10, bold=True, color=rgb(138,150,168))
         add_text(slide, pad + Inches(0.2), hint_top + Inches(0.24), card_w, Inches(0.28),
                  "✦  Es werden nur empirische Arbeiten betreut (qualitativ oder quantitativ).    "
-                 "✦  Die Arbeiten können auf Deutsch oder Englisch verfasst werden.", 10,
+                 "✦  Die Arbeiten können auf Deutsch oder Englisch verfasst werden.", 12,
                  color=rgb(74,85,104))
 
     # Footer
