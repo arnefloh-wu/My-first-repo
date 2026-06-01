@@ -1,0 +1,308 @@
+/*-- scss:defaults --*/
+
+// WU Brand Colors
+$wu-teal:          #3399CC;
+$wu-navy:          #000066;
+$wu-orange:        #F26B43;
+$wu-purple:        #4B2582;
+$wu-gray-dark:     #1a1a2e;
+$wu-gray-medium:   #7F7F7F;
+$wu-gray-footer:   #888888;
+$wu-gray-light:    #A5A5A5;
+
+// Slide background and body
+$body-bg:          #ffffff;
+$body-color:       #000000;
+$link-color:       $wu-teal;
+
+// Headings use Georgia (serif) to match the WU slide master
+$presentation-heading-font:   "Georgia", "Times New Roman", serif;
+$presentation-heading-color:  #000000;
+$presentation-heading-font-weight: normal;
+
+// Body uses Avenir (or closest system fallback)
+$font-family-sans-serif: "Avenir Next", "Avenir", "Nunito Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+
+// Font sizes (Quarto revealjs base)
+$presentation-font-size-root:  32px;
+$presentation-h1-font-size:    2.2em;   // title slide ~32pt
+$presentation-h2-font-size:    1.5em;   // content slide title
+$presentation-h3-font-size:    1.1em;
+
+// Code blocks
+$code-block-bg:  #f8f9fa;
+$code-color:     #333333;
+
+/*-- scss:rules --*/
+
+// ============================================================
+// TITLE SLIDE
+// ============================================================
+.reveal .slides section.quarto-title-block,
+.reveal .slides .title-slide {
+  background: linear-gradient(160deg, #1e2640 0%, #243050 100%);
+  text-align: left;
+  padding: 3em 3.5em 3em 3.5em;
+
+  h1.title {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0.15em;
+    line-height: 1.2;
+  }
+
+  .quarto-title-authors,
+  p.author {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.75em;
+    margin-top: 2em;
+  }
+
+  p.subtitle {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.3em;
+  }
+
+  p.date,
+  .quarto-title-meta {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.65em;
+    margin-top: 0.5em;
+  }
+
+  // Teal accent bar after the title (decorative element from WU template)
+  h1.title::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 5px;
+    background-color: $wu-teal;
+    margin-top: 0.7em;
+    margin-bottom: 0;
+  }
+}
+
+// ============================================================
+// CONTENT SLIDE TITLES (h2)
+// ============================================================
+.reveal h2 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 0.1em;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+// Teal accent bar below each slide heading (matches "Rechteck 5" in template)
+.reveal h2::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 4px;
+  background-color: $wu-teal;
+  margin-top: 0.35em;
+  margin-bottom: 0.4em;
+}
+
+.reveal h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 1.05em;
+  color: $wu-teal;
+}
+
+// ============================================================
+// BODY TEXT & BULLETS
+// ============================================================
+.reveal .slides section {
+  font-family: "Avenir Next", "Avenir", "Nunito Sans", "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+.reveal ul,
+.reveal ol {
+  font-family: "Avenir Next", "Avenir", "Nunito Sans", "Segoe UI", sans-serif;
+  margin-left: 0;
+  padding-left: 1.2em;
+}
+
+// Teal bullet markers matching the template's buClr #3399CC
+.reveal ul > li::marker {
+  color: $wu-teal;
+}
+
+.reveal ul {
+  list-style-type: "▪ ";
+}
+
+.reveal ul ul {
+  list-style-type: "▪ ";
+}
+
+// ============================================================
+// FOOTER & SLIDE NUMBER
+// ============================================================
+.reveal .footer {
+  font-family: "Verdana", "Geneva", sans-serif;
+  font-size: 0.55em;
+  color: $wu-gray-footer;
+  text-align: left;
+  padding-left: 3em;
+}
+
+.reveal .slide-number {
+  font-family: "Verdana", "Geneva", sans-serif;
+  font-size: 0.55em;
+  color: $wu-gray-footer;
+  background: transparent;
+  right: auto;
+  left: 3em;
+  bottom: 0.4em;
+}
+
+.slide-number-delimiter {
+  display: none;
+}
+
+// ============================================================
+// SECTION / CHAPTER DIVIDER SLIDE
+// Apply class="section-slide" to a ## slide for this style
+// ============================================================
+.reveal .slides section.section-slide {
+  background-color: $wu-teal;
+  text-align: left;
+  padding: 2.5em 3.5em;
+
+  h2 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.1em;
+  }
+
+  h2::after {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  h3 {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  p, li {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+// ============================================================
+// CLOSING SLIDE
+// Apply class="closing-slide" to a ## slide for this style
+// ============================================================
+.reveal .slides section.closing-slide {
+  background-color: $wu-gray-medium;
+  text-align: left;
+
+  h2 {
+    color: #ffffff;
+  }
+
+  h2::after {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .contact-box {
+    background-color: $wu-purple;
+    color: #ffffff;
+    padding: 1em 1.5em;
+    margin-top: 1em;
+    display: inline-block;
+    font-size: 0.75em;
+    line-height: 1.6;
+  }
+}
+
+// ============================================================
+// TABLES – header row in WU navy
+// ============================================================
+.reveal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  font-size: 0.75em;
+}
+
+.reveal table thead tr {
+  background-color: $wu-navy;
+  color: #ffffff;
+}
+
+.reveal table thead th {
+  padding: 0.5em 0.8em;
+  font-weight: normal;
+  text-align: left;
+  border: none;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background-color: #e8f4f9;
+}
+
+.reveal table tbody td {
+  padding: 0.4em 0.8em;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+
+// ============================================================
+// TWO-COLUMN LAYOUT HELPERS
+// ============================================================
+.reveal .columns {
+  display: flex;
+  gap: 2em;
+}
+
+.reveal .column {
+  flex: 1;
+}
+
+// ============================================================
+// CODE BLOCKS
+// ============================================================
+.reveal pre {
+  font-size: 0.65em;
+  border-left: 4px solid $wu-teal;
+  background-color: #f5f8fa;
+}
+
+// ============================================================
+// MISC HELPERS
+// ============================================================
+.wu-highlight {
+  color: $wu-teal;
+  font-weight: bold;
+}
+
+.wu-orange {
+  color: $wu-orange;
+}
+
+.wu-navy {
+  color: $wu-navy;
+}
+
+// Horizontal rule styled as WU accent bar
+.reveal hr {
+  border: none;
+  height: 4px;
+  background-color: $wu-teal;
+  width: 85px;
+  margin: 0.5em 0;
+}

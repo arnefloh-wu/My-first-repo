@@ -1,0 +1,160 @@
+---
+title: "WU Präsentationsvorlage"
+subtitle: "Information zur Präsentation (Autor/in, Versionsnr. etc.)"
+author: "Univ.Prof. Dr. Max Muster"
+institute: "Department Mustertext Deutsch"
+date: today
+lang: de
+
+format:
+  revealjs:
+    theme: [default, wu.scss]
+    slide-number: "c/t"
+    footer: "FUSSZEILE"
+    # logo: img/wu-logo.png   # WU-Logo hier einfügen
+    width: 1280
+    height: 720
+    margin: 0.1
+    transition: none
+    background-transition: none
+    navigation-mode: linear
+    controls: true
+    progress: false
+    history: true
+    center: false
+    highlight-style: github
+    toc: false
+
+  # Alternativ als PowerPoint mit Original-PPTX als Referenzvorlage:
+  # pptx:
+  #   reference-doc: af9e945a-WU_Pr_sentationsvorlage_inkl.pptx
+---
+
+# Verwendung der Folienlayouts {.section-slide}
+
+---
+
+## Verwendung der Folienlayouts
+
+In der WU-Vorlage stehen folgende Folienlayouts zur Verfügung:
+
+- **Neue Folie** mit gewünschtem Layout hinzufügen
+- Titel und Inhalt (Standardfolie)
+- Zweispaltige Folie (Zwei Inhalte)
+- Kapiteltrennfolie (Zwischentitel) mit `.section-slide`
+- Abschlussfolie mit `.closing-slide`
+
+::: {.fragment}
+Nachträglich das Layout einer Folie ändern: Klassen-Attribut `{.section-slide}` oder `{.closing-slide}` an den Folientitel anhängen.
+:::
+
+---
+
+## Vorlage für Tabelle
+
+| Beispieltext 1 | Beispieltext 2 | Beispieltext 3 |
+|:---------------|:---------------|:---------------|
+| Mustertext Spalte 1 | Mustertext Spalte 2 | Mustertext Spalte 3 |
+| Mustertext Spalte 1 | Mustertext Spalte 2 | Mustertext Spalte 3 |
+| Mustertext Spalte 1 | Mustertext Spalte 2 | Mustertext Spalte 3 |
+| Mustertext Spalte 1 | Mustertext Spalte 2 | Mustertext Spalte 3 |
+| Mustertext Spalte 1 | Mustertext Spalte 2 | Mustertext Spalte 3 |
+| Mustertext Spalte 1 | Mustertext Spalte 2 | Mustertext Spalte 3 |
+
+: Tabellenüberschrift {tbl-colwidths="[33,33,34]"}
+
+---
+
+# Zwischentitel zweizeilig {.section-slide}
+
+Untertitel oder kurzer Beschreibungstext zur neuen Sektion
+
+---
+
+## Vorlage für einfaches Balkendiagramm
+
+```{r}
+#| label: fig-balkendiagramm
+#| echo: false
+#| fig-height: 4.2
+#| fig-align: left
+
+barplot(
+  c(42, 68, 55, 81, 37),
+  names.arg = c("Kat. A", "Kat. B", "Kat. C", "Kat. D", "Kat. E"),
+  col       = "#3399CC",
+  border    = NA,
+  main      = "",
+  ylab      = "",
+  las       = 1,
+  cex.names = 0.9,
+  cex.axis  = 0.8
+)
+```
+
+---
+
+## Zweispaltige Folie (Zwei Inhalte)
+
+:::: {.columns}
+
+::: {.column width="48%"}
+**Linke Spalte**
+
+- Mustertext Punkt 1
+- Mustertext Punkt 2
+- Mustertext Punkt 3
+  - Untergeordneter Punkt
+  - Untergeordneter Punkt
+- Mustertext Punkt 4
+:::
+
+::: {.column width="48%"}
+**Rechte Spalte**
+
+- Mustertext Punkt 1
+- Mustertext Punkt 2
+- Mustertext Punkt 3
+  - Untergeordneter Punkt
+  - Untergeordneter Punkt
+- Mustertext Punkt 4
+:::
+
+::::
+
+---
+
+## Folie mit Code-Ausgabe
+
+```{r}
+#| echo: true
+#| eval: false
+
+library(ggplot2)
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point(color = "#3399CC", size = 3) +
+  theme_minimal() +
+  labs(
+    title = "Fahrzeuggewicht vs. Kraftstoffverbrauch",
+    x     = "Gewicht (1000 lbs)",
+    y     = "Meilen pro Gallone"
+  )
+```
+
+---
+
+## Kontakt {.closing-slide}
+
+::: {.contact-box}
+**DEPARTMENT MUSTERTEXT DEUTSCH**
+DEPARTMENT MUSTERTEXT ENGLISCH
+
+Welthandelsplatz 1, 1020 Vienna, Austria
+
+UNIV.PROF. DR. MAX MUSTER
+T +43-1-313 36-DW
+F +43-1-313 36-DW
+max.muster\@wu.ac.at
+[www.wu.ac.at](https://www.wu.ac.at)
+:::
